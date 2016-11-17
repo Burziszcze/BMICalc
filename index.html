@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>BMI CALCULATOR</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Body Mass Index Calculator" />
+    <meta name="keywords" content="wskaźnik bmi, bmi, oblicz bmi, bmi kalkulator, jak obliczyć bmi, twój bmi, co to jest bmi?, body mass index calculator" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1" />
+    <!-- Google fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,900&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div id="container">
+    <header class="header">Body Mass Index calculator</header>
+    <form name="bmiForm">
+        Twoja waga:
+        <br />
+        <input type="number" placeholder="waga(kg)" name="weight" />
+        <br/> Twój wzrost:
+        <br />
+        <input type="number" placeholder="wzrost(cm)" name="height" />
+        <input type="button" value="Oblicz swój BMI" onClick="obliczBmi()">
+        <br /> Twoje BMI wynosi:
+        <br />
+        <input type="number" name="bmi" disabled/>
+        <br /> Oznacza to, że:
+        <br />
+        <input type="text" name="wynik" />
+        <input type="reset" value="Reset" />
+    </form>
+        <div class="zakres">
+            <h2>Zakres wartości</h2>
+            <ul>
+                <li>
+                    < 16,0 – wygłodzenie</li>
+                        <li> 16,0–16,99 – wychudzenie (spowodowane często przez ciężką chorobę lub anoreksję)</li>
+                        <li> 17,0–18,49 – niedowagę</li>
+                        <li> 18,5–24,99 – wartość prawidłowa</li>
+                        <li> 25,0–29,99 – nadwaga</li>
+                        <li> 30,0–34,99 – I stopień otyłości</li>
+                        <li> 35,0–39,99 – II stopień otyłości (otyłość kliniczna)</li>
+                        <li> ≥ 40,0 – III stopień otyłości (otyłość skrajna)</li>
+            </ul>
+        </div>
+    <div class="row">
+        <h2>Czym jest BMI</h2>
+        <p>Wskaźnik masy ciała (ang. Body Mass Index (BMI); również: wskaźnik Queteleta II) – współczynnik powstały przez podzielenie masy ciała podanej w kilogramach przez kwadrat wysokości podanej w metrach. Klasyfikacja (zakres wartości) wskaźnika BMI została opracowana wyłącznie dla dorosłych i nie może być stosowana u dzieci. Dla oceny prawidłowego rozwoju dziecka wykorzystuje się siatki centylowe, które powinny być dostosowane dla danej populacji. Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością, np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. Podwyższona wartość BMI związana jest ze zwiększonym ryzykiem wystąpienia takich chorób.</p>
+    </div>
+    <div class="row">
+        <h2>Jak to interpretować?</h2>
+        <p>BMI jest bardzo prosty w użyciu, jednak nie uwzględnia on indywidualnej budowy ciała. Jest dosyć niedokładnym wskaźnikiem niedowagi i nadwagi oraz ryzyk chorób z nimi związanych. Kulturyści mogą mieć BMI wskazujące na skrajną otyłość, posiadając jednocześnie bardzo mało tkanki tłuszczowej. Z drugiej strony, BMI zupełnie zdrowych, szczupłych i wysokich lekkoatletów może wskazywać na skrajną niedowagę (np. BMI Yohanna Diniza przy wzroście 185 cm i wadze 59 kg wyniesie 17,24). Związek między wielkością wskaźnika a ryzykiem chorób różni się między populacjami o różnych proporcjach ciała. I tak wśród Azjatów ryzyko cukrzycy jest znacząco wyższe przy niższych wartościach BMI. Zawartość tłuszczu w organizmie jest też wyższa u kobiet, niż u mężczyzn przy normalnej masie ciała. W przypadku kobiet tkanka tłuszczowa odpowiada za płodność i dojrzewanie płciowe. Dokładniejszym, ale trudniejszym do zmierzenia bez specjalistycznej aparatury wskaźnikiem zagrożeń wynikających z nadmiaru tkanki tłuszczowej jest procentowa zawartość tłuszczu w organizmie. W praktyce klinicznej nie jest zalecane stosowanie wskaźnika BMI do oznaczania prawidłowej masy ciała dla dzieci do ok. 14 roku życia, służą do tego tabele centylowe i odpowiednia interpretacja danych dot. masy ciała i wzrostu – głównie bierze się pod uwagę jaka jest różnica w tzw. kanałach centylowych wzrostu i masy ciała dla danego dziecka.</p>
+    </div>
+    <div class="row">
+        <h2>Dlaczego to ważne?</h2>
+        <p>Oznaczanie wskaźnika masy ciała ma znaczenie w ocenie zagrożenia chorobami związanymi z nadwagą i otyłością, np. cukrzycą, chorobą niedokrwienną serca, miażdżycą. Podwyższona wartość BMI związana jest ze zwiększonym ryzykiem wystąpienia takich chorób..</p>
+    </div>
+    <footer class="footer">Copyright by Buurzuum &copy; 2016
+        <p>źródło tekstu
+            <a href="https://pl.wikipedia.org/wiki/Wska%C5%BAnik_masy_cia%C5%82a">Wskaźnik masy ciała</a></p>
+    </footer>
+    </div>
+    <script>
+    function obliczBmi() {
+        var weight = document.bmiForm.weight.value
+        var height = document.bmiForm.height.value
+        if (weight > 0 && height > 0) {
+            var wynikBmi = weight / (height / 100 * height / 100)
+            document.bmiForm.bmi.value = wynikBmi
+            if (wynikBmi < 18.5) {
+                document.bmiForm.wynik.value = "masz niedowagę!"
+            }
+            if (wynikBmi > 18.5 && wynikBmi < 25) {
+                document.bmiForm.wynik.value = "Twoje BMI jest prawidłowe!"
+            }
+            if (wynikBmi > 25 && wynikBmi < 30) {
+                document.bmiForm.wynik.value = "masz nadwagę"
+            }
+            if (wynikBmi > 30 && wynikBmi < 35) {
+                document.bmiForm.wynik.value = "masz I stopień otyłości"
+            }
+            if (wynikBmi > 35 && wynikBmi < 40) {
+                document.bmiForm.wynik.value = "masz II stopień otyłości"
+            }
+            if (wynikBmi > 40) {
+                document.bmiForm.wynik.value = "masz III stopień otyłości"
+            }
+        } else {
+            alert("Musisz wypełnić wszystkie pola!")
+        }
+    }
+    </script>
+</body>
+
+</html>
